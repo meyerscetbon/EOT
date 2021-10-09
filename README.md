@@ -6,6 +6,7 @@ In this work, we introduce an extension of the Optimal Transport, namely the Equ
 
 <a href="url"><img src="results/primal_W.png" align='left' height="500" ></a> <a href="url"><img src="results/primal_W_neg.png" align='right' height="500" ></a>
 
+
 To be able to compute EOT, we propose to regularize it by regularizing the objective with an entropic term. Such regularization leads to a Sinkhorn-like algorithm which manages to compute efficiently an approximation of EOT. 
 
 This repository contains a Python implementation of the algorithms presented in the [paper](https://arxiv.org/pdf/2006.07260.pdf).
