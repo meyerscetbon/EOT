@@ -30,7 +30,7 @@ In this work, we introduce an extension of the Optimal Transport, namely the Equ
 \
 \
 \
-To be able to compute EOT, we propose to regularize it by regularizing the objective with an entropic term. Such regularization leads to a Sinkhorn-like algorithm which manages to compute efficiently an approximation of EOT. In this [file](https://github.com/meyerscetbon/EOT/blob/main/toy_example.py) we provide some toy examples where we compare our Sinkhorn-like algorithm with a projected gradient descent one and with a standard linear programming solver.
+To be able to compute EOT, we propose to regularize it by adding an entropic term to the objective. Such regularization leads to a Sinkhorn-like algorithm which manages to compute efficiently an approximation of EOT. In this [file](https://github.com/meyerscetbon/EOT/blob/main/toy_example.py) we provide some toy examples where we compare our Sinkhorn-like algorithm with a projected gradient descent one and with a standard linear programming solver.
 
 
 This repository contains a Python implementation of the algorithms presented in the [paper](https://arxiv.org/pdf/2006.07260.pdf).
