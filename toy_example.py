@@ -2,9 +2,6 @@ import numpy as np
 import ot
 import sys
 
-sys.path.append("./EOT_github/")
-import EOT_sinkhorn
-
 
 ## Generate samples
 def simul_two_Gaussians(num_samples, seed=49):
@@ -28,7 +25,7 @@ a, b = (1 / num_samples) * np.ones(num_samples), (1 / num_samples) * np.ones(
 )
 
 
-# Compute some costs cost matrices
+## Compute some costs cost matrices
 C1 = EOT_sinkhorn.Square_Euclidean_Distance(X, Y)
 C2 = EOT_sinkhorn.alpha_Euclidean_Distance(X, Y, alpha=2.2)
 C3 = EOT_sinkhorn.Trivial_cost(X, Y)
@@ -37,7 +34,7 @@ C[0, :, :] = C1
 C[1, :, :] = C2
 C[2, :, :] = C3
 
-# Or consider the example defined in the sequential OT experiment
+## Or consider the example defined in the sequential OT experiment
 N = 2
 C = EOT_sinkhorn.N_cost_matrices(0.7, X, Y, N, seed_init=49)
 
@@ -61,7 +58,7 @@ np.sum(P, axis=1)
 res_primal = EOT_sinkhorn.compute_EOT_primal(lam, alpha, beta, KC, denom, reg, a, b)
 print(res_primal)
 
-# Accelerated  PGD method
+## Accelerated  PGD method
 max_iter = 3000
 res, acc, times, lam, alpha, beta, denom, KC, K_trans = EOT_sinkhorn.EOT_APGD(
     C, reg, a, b, max_iter=max_iter
@@ -73,7 +70,7 @@ res_primal = EOT_sinkhorn.compute_EOT_primal(lam, alpha, beta, KC, denom, reg, a
 print(res_primal)
 
 
-#### Linear Program: PRIMAL ####
+## Linear Program: primal formulation
 res = EOT_sinkhorn.LP_solver_Primal(C, a, b)
 print(res["fun"])
 
