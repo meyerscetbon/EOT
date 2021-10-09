@@ -138,7 +138,7 @@ def EOT_PGD(C, reg, a, b, max_iter=1000):
     return acc[-1], acc, times, lam, alpha, beta, denom, K_lam_trans, K_trans
 
 
-#### Accelerated Projected Gradient Ascent: for N costs ####
+## Accelerated Projected Gradient Ascent: for N costs ####
 # C is of size (N,n,m)
 def EOT_APGD(C, reg, a, b, max_iter=1000):
     start = time.time()
@@ -239,7 +239,7 @@ def compute_grad_EOT(lam, f, g, K, C, a, b, reg):
     return grad_lam, grad_f, grad_g, denom, K_lam_trans, K_trans
 
 
-#### Projected Sinkhorn: for N costs ####
+## Projected Sinkhorn: for N costs
 # C is of size (N,n,m)
 def EOT_PSinkhorn(C, reg, a, b, max_iter=1000, tau=1e-20, stable=0):
     start = time.time()
