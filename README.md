@@ -4,7 +4,7 @@ Code of the [paper](https://arxiv.org/pdf/2006.07260.pdf) by Meyer Scetbon, Laur
 ## A New Fair Optimal Transport Problem Between Multiple Agents
 In this work, we introduce an extension of the Optimal Transport, namely the Equitable Optimal Transport (EOT) problem, when multiple costs are involved. Considering each cost as an agent, we aim to share equally between agents the work of transporting one distribution to another. In the following figure, we illustrate how our method split the transportation task between 3 given agents.
 
-<a href="url"><img src="results/primal_W.png" align='center' height="500" ></a>
+<a href="url"><img src="results/primal_W.png" align='center' height="500" ></a> <a href="url"><img src="results/primal_W_neg.png" align='center' height="500" ></a>
 
 To be able to compute EOT, we propose to regularize it by regularizing the objective with an entropic term. Such regularization leads to a Sinkhorn-like algorithm which manages to compute efficiently an approximation of EOT. 
 
